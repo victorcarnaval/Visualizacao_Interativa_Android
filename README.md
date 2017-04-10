@@ -10,5 +10,4 @@ Visualização gráfica e interativa de dados públicos para dispositivos Androi
 ![alt tag](https://github.com/VCarnaval/Visualizacao_Interativa_Android/blob/master/images_readme/Screenshot_20170410-082418.png)
 ![alt tag](https://github.com/VCarnaval/Visualizacao_Interativa_Android/blob/master/images_readme/Screenshot_20170410-082428.png)
 
-Rafaela Santos
-Victor Carnaval
+Desenvolvido por Rafaela Santos e Victor Carnaval.
