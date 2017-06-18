@@ -1,8 +1,9 @@
-package com.example.aluno.acidentestransito;
+package com.example.victor.acidentetransito;
 
 /**
- * Created by Aluno on 13/03/2017.
+ * Created by Victor on 24/03/2017.
  */
+
 public class Marker {
     private String endereco;
     private int totalAcidentes;

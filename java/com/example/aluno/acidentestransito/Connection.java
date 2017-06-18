@@ -1,4 +1,5 @@
-package com.example.aluno.acidentestransito;
+package com.example.victor.acidentetransito;
+
 import android.os.StrictMode;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,8 +12,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Aluno on 13/03/2017.
+ * Created by Victor on 24/03/2017.
  */
+
 public class Connection {
     public List<Marker> getData() throws JSONException {
 
@@ -60,13 +62,10 @@ public class Connection {
             for (int i = 0; i < json.length(); i++) {
                 JSONObject obj = json.getJSONObject(i);
                 found.add(new Marker(obj.getString("end"), obj.getInt("total_acidentes"), obj.getInt("acidentes_fatais"), obj.getDouble("lat"), obj.getDouble("long")));
-
             }
-
         } catch (JSONException e) {
             // handle exception
         }
-
         return found;
     }
 }
