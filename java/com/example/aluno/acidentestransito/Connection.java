@@ -1,5 +1,8 @@
-package com.example.victor.acidentetransito;
+package com.example.aluno.acidentestransito;
 
+/**
+ * Created by Aluno on 19/06/2017.
+ */
 import android.os.StrictMode;
 import org.json.JSONArray;
 import org.json.JSONException;

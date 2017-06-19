@@ -1,6 +1,8 @@
-package com.example.victor.acidentetransito;
+package com.example.aluno.acidentestransito;
 
 import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.FragmentActivity;
@@ -25,7 +27,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        Vibrar();
     }
 
     @Override
@@ -34,6 +35,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(sjc));
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(11));
         googleMap.isTrafficEnabled();
+
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(1000);
 
         try{
             this.markers = con.getData();
@@ -67,11 +71,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         catch (JSONException e){
             e.printStackTrace();
         }
-    }
-
-    private void Vibrar(){
-        Vibrator rr = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        long milliseconds = 30;
-        rr.vibrate(milliseconds);
     }
 }
